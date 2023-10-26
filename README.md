@@ -5,7 +5,7 @@
 
 ⚒️ I’m currently working on **gambling-game**
 
-®️ I’m currently learning **C/C++**
+®️ I’m currently learning **DSA**
 
 🦾 All of my projects are available at [https://spiffy-elf-04f3d8.netlify.app/](https://spiffy-elf-04f3d8.netlify.app/)
 
