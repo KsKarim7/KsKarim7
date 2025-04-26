@@ -1,4 +1,3 @@
- //  
 <h1 align="center">Hey! 🤖,It's me Khaled Karim</h1>
 <h3 align="center">An ardent  Web Developer</h3>
 <img align="right" alt="Coding" width="400" src="https://www.checkmarket.com/wp-content/uploads/2016/05/ready-to-code.gif"> 
