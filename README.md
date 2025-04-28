@@ -2,9 +2,9 @@
 <h3 align="center">An ardent  Web Developer</h3>
 <img align="right" alt="Coding" width="400" src="https://www.checkmarket.com/wp-content/uploads/2016/05/ready-to-code.gif"> 
 
-⚒️ I’m currently working on **DSA Projects**
+⚒️ I’m currently working on **ML/DL Projects**
 
-®️ I’m currently learning **Algorithm**
+®️ I’m currently learning **Multi-modal models**
 
 🦾 All of my projects are available at [https://spiffy-elf-04f3d8.netlify.app/](https://spiffy-elf-04f3d8.netlify.app/)
 
