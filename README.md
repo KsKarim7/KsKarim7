@@ -10,7 +10,7 @@
 
 📫 You know how to reach me **kskarim177@gmail.com**
 
-📄 Know about my experiences [[https://docs.google.com/document/d/1dGXJ7_hdDMe7vAwfbaqYwhHrs0lqUvQbA_q5rIS15a4/edit?usp=sharing](https://docs.google.com/document/d/1dGXJ7_hdDMe7vAwfbaqYwhHrs0lqUvQbA_q5rIS15a4/edit?usp=sharing)]
+📄 Know about my experiences [https://drive.google.com/file/d/1BmyTbdOHBJyGViNrCcYdpvB9pKKtV7tj/view?usp=sharing]
 
 ⚡ Fun fact **I am not Funny**
 
