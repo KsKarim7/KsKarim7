@@ -1,0 +1,31 @@
+# Generates the contribution-graph snake animation and publishes it to the `output` branch.
+# Place at: .github/workflows/snake.yml  (in the KsKarim7/KsKarim7 repository)
+# Optional: delete this file and the snake <picture> block in README.md if you'd rather keep the profile fully static.
+name: Contribution snake
+
+on:
+  schedule:
+    - cron: "23 2 * * *"      # daily at 02:23 UTC
+  workflow_dispatch:
+  push:
+    branches: [main, master]
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
+      - uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
