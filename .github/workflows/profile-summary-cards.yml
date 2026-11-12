@@ -1,0 +1,23 @@
+# Generates the five charts under profile-summary-card-output/ and commits them to this repo.
+# Place at: .github/workflows/profile-summary-cards.yml  (in the KsKarim7/KsKarim7 repository)
+name: Profile summary cards
+
+on:
+  schedule:
+    - cron: "17 2 * * *"      # daily at 02:17 UTC (08:17 Dhaka)
+  workflow_dispatch:          # lets you run it manually from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: vn7n24fzkq/github-profile-summary-cards@release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          USERNAME: ${{ github.repository_owner }}
+          UTC_OFFSET: 6       # Dhaka, so the "productive time" chart uses local hours
