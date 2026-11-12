@@ -15,9 +15,29 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: vn7n24fzkq/github-profile-summary-cards@release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           USERNAME: ${{ github.repository_owner }}
           UTC_OFFSET: 6       # Dhaka, so the "productive time" chart uses local hours
+
+      # The card truncates "KsKarim7 (Khaled Karim)" to a fixed length.
+      # Replace that title with the full name in every theme's profile-details card.
+      - name: Show full name on profile card
+        run: |
+          git pull --ff-only
+          for f in profile-summary-card-output/*/0-profile-details.svg; do
+            sed -i -E 's/KsKarim7 \([^<]*\)/Khaled Saifullah Karim/g' "$f"
+          done
+          if ! grep -q "Khaled Saifullah Karim" profile-summary-card-output/default/0-profile-details.svg; then
+            echo "Title pattern not found. Current title text:"
+            grep -o 'KsKarim7[^<]*' profile-summary-card-output/default/0-profile-details.svg || true
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile-summary-card-output
+          git diff --cached --quiet || git commit -m "Show full name on profile card"
+          git push
